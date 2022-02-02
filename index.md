@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+## QUTy Development Board
 
-You can use the [editor on GitHub](https://github.com/markbroadmeadowqut/platform-quty/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+QUTy is a development board based on the Microchip ATtiny1626 AVR microcontroller. It is designed specifically to teach microcontroller programming in the course _CAB202 Microprocessors and Digital Systems_.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Features
 
-### Markdown
+- Microchip ATtiny1626 microcontroller (16 KB flash, 2 KB SRAM)
+- USB-C interface for power, programming (UPDI) and serial communications (UART)
+- 4x pushbuttons
+- Piezo buzzer
+- Potentiometer
+- 2-digit, 7-segment LED display
+- Expansion header for socketting into breadboard
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Development environment
 
-```markdown
-Syntax highlighted code block
+Development for the QUTy is supported via [PlatformIO](https://platformio.org/). We recommend using the [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode) which is avilable for Windows, MacOS, and Linux.
 
-# Header 1
-## Header 2
-### Header 3
+#### Usage
 
-- Bulleted
-- List
+1. Install [PlatformIO](https://docs.platformio.org/en/latest/integration/ide/vscode.html#ide-vscode)
+2. Create a PlatformIO project and configure the QUTy platform in the platformio.ini file:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+[env:QUTy]
+platform = quty
+board = QUTy
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+#### Examples
 
-### Jekyll Themes
+A number of example projects are available as part of the platform. These can be accessed via: 
+```
+PlatformIO Home > Platforms > QUTy > Examples
+```
+- quty_blinky_c 
+  - 1 Hz LED flash, in C.
+- quty_blinky_asm
+  - 1 Hz LED flash, in Assembly.
+- quty_blinky_asm_bare
+  - 1 Hz LED flash, in Assembly (without startup code).
+- quty_serial_helloworld
+  - Serial monitor/stdio example (prints "Hello world!" on key press).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/markbroadmeadowqut/platform-quty/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Contact
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+QUTy designed and maintained by the Queenland University of Technology (QUT), based in Brisbane Austrialia. Please direct enquiries to mark.broadmeadow@qut.edu.au.
