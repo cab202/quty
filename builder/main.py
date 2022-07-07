@@ -77,6 +77,7 @@ env.Replace(
 
     UPLOADER="pymcuprog",
     UPLOADERFLAGS=[
+		"--erase",
         "-d", "$BOARD_MCU",
         "-t", "uart",
         "-f", "$SOURCES"
@@ -179,7 +180,7 @@ if upload_protocol == "custom":
 else:
     upload_actions = [
         env.VerboseAction(BeforeUpload, "Looking for upload port..."),
-        env.VerboseAction("$ERASECMD", "Erasing flash..."),
+        #env.VerboseAction("$ERASECMD", "Erasing flash..."),
         env.VerboseAction("$UPLOADCMD", "Uploading $SOURCE")
     ]
 

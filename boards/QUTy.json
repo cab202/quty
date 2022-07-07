@@ -1,7 +1,7 @@
 {
   "build": {
     "extra_flags": "-D__AVR_DEV_LIB_NAME__=tn1626",
-    "f_cpu": "3333333L",
+    "f_cpu": "10000000L",
     "mcu": "attiny1626",
     "hwids": [
       [
@@ -19,6 +19,6 @@
     "protocol": "updi",
     "speed": 230400
   },
-  "url": "https://markbroadmeadowqut.github.io/platform-quty/",
+  "url": "https://cab202.github.io/quty/",
   "vendor": "QUT"
 }
