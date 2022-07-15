@@ -57,6 +57,11 @@ def BeforeUpload(target, source, env):  # pylint: disable=W0613,W0621
 
 env = DefaultEnvironment()
 
+try:
+    import pymcuprog
+except ImportError:
+    env.Execute("$PYTHONEXE -m pip install pymcuprog")
+
 env.Replace(
     AR="avr-gcc-ar",
     AS="avr-as",
