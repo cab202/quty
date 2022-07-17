@@ -42,6 +42,10 @@ Development for the QUTy is supported via [PlatformIO](https://platformio.org/).
     ```
 	
 	OR, open an example project (see below).
+	
+#### Drivers
+
+Depending on your system, you may need to download and install the [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) in order to be able to programme the QUTy, or use the serial monitor feature.
 
 #### Examples
 
