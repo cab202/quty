@@ -24,16 +24,17 @@ Development for the QUTy is supported via [PlatformIO](https://platformio.org/).
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/download)
 2. Install the [PlatformIO](https://docs.platformio.org/en/latest/integration/ide/vscode.html#id1) extension for VSCode.
-    ![PlatformIO installation](ExtensionInstall.png) 
+    ![PlatformIO installation](ExtensionInstall.png)
+3. If you do not already have a Git client installed on your system, install [Git](https://git-scm.com/). For the Windows installer version, the default pre-selected installation options are appropriate and can be left unchanged.
 
-3. Install the QUTy platform via:
+4. Install the QUTy platform via:
 
     ```
     PlatformIO Home > Platforms > Advanced Installation > https://github.com/cab202/quty
     ```
     ![QUTy platform installation](PlatformInstall.png)
 	 
-4. Create a PlatformIO project and configure the QUTy platform in the platformio.ini file:
+5. Create a PlatformIO project and configure the QUTy platform in the platformio.ini file:
 
     ```
     [env:QUTy]
