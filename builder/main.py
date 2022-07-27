@@ -60,7 +60,7 @@ env = DefaultEnvironment()
 try:
     import pymcuprog
 except ImportError:
-    env.Execute("$PYTHONEXE -m pip install pymcuprog")
+    env.Execute("\"$PYTHONEXE\" -m pip install pymcuprog")
 
 env.Replace(
     AR="avr-gcc-ar",
