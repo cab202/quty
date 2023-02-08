@@ -63,9 +63,9 @@ env.Append(
     LIBS=["m"]
 )
 
-if env.GetProjectConfig().has_option("env:" + env["PIOENV"], "link_flags"):
+if env.GetProjectConfig().has_option("env:" + env["PIOENV"], "custom_link_flags"):
     env.Append(
-        LINKFLAGS=env.GetProjectOption("link_flags")
+        LINKFLAGS=env.GetProjectOption("custom_link_flags")
     )
 
 # copy CCFLAGS to ASFLAGS (-x assembler-with-cpp mode)
