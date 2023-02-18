@@ -20,6 +20,8 @@ For further detail, please refer to the [QUTy-V01 schematic](QUTy-V01_Schematic.
 
 Development for the QUTy is supported via [PlatformIO](https://platformio.org/). We recommend using the [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode) which is available for Windows, MacOS, and Linux.
 
+For a CLI-only installation, please visit [CLI Usage](cli.md).
+
 #### Installation
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/download)
