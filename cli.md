@@ -45,7 +45,7 @@ If you do not want to install PIO globally, please see [Advanced Installation](#
     # (Windows) C:\Users\username\.platformio\penv\Scripts\platformio.exe
     ```
 
-    The user may wish to add this directory to the system PATH variable or create an alias to this executable.
+    You may wish to add this directory to the system PATH variable or create an alias to this executable.
 
 3. Add the QUTy platform by following the steps in [QUTy Platform Installation](#quty-platform-installation).
 
@@ -111,7 +111,7 @@ pio pkg list --global
 
     Here the `.pio` directory is automatically created by PIO when the user tries to build or upload the program.
 
-    Note that if the user wishes to use the `lib` directory, the following compiler flags need to be added inside `platformio.ini`.
+    Note that if you wish to use the `lib` directory, the following compiler flags need to be added inside `platformio.ini`.
 
     ```ini
     # platformio.ini
