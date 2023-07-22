@@ -74,16 +74,6 @@ pio pkg list --global
     board = QUTy
     ```
 
-    Script to automate the above
-
-    ```bash
-    # Linux/macOS
-    printf "[env:QUTy]\nplatform = quty\nboard = QUTy" > platformio.ini
-
-    # Windows
-    (echo [env:QUTy] && echo platform = quty && echo board = QUTy) > platformio.ini
-    ```
-
 2. Follow the given directory structure as per PlatformIO specifications.
 
     ```bash
@@ -97,16 +87,6 @@ pio pkg list --global
     │   └───<pre-compiled programs>
     └───src
         └───<source files>
-    ```
-
-    Script to automate the above
-
-    ```bash
-    # Linux/macOS
-    mkdir include lib src && touch src/main.c
-
-    # Windows
-    mkdir include lib src && echo. > src/main.c
     ```
 
     Here the `.pio` directory is automatically created by PIO when the user tries to build or upload the program.
