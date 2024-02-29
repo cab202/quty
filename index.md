@@ -27,8 +27,9 @@ which is available for Windows, MacOS, and Linux.
 #### Installation
 
 1. Install the [Git client](https://git-scm.com/) on your system.
-   For Windows users using an installer, the default options may be used.
-2. Install [Visual Studio Code](https://code.visualstudio.com/download)
+   For Windows users using an installer, the default installation
+   options may be used.
+2. Install [Visual Studio Code](https://code.visualstudio.com/download).
 3. Install the [PlatformIO IDE extension](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) for VSCode.
 4. Install the QUTy platform via:
 
