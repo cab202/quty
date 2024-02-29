@@ -51,7 +51,14 @@ which is available for Windows, MacOS, and Linux.
     board = QUTy
     ```
 
-    or, open an existing project (see [Examples](#examples)).
+    or, open an existing project by opening a directory as a workspace
+    in VSCode.
+
+    ```txt
+    File > Open Folder
+    ```
+
+    Ensure that platformio.ini is present in the root of the workspace.
 
 6. Communicating with the QUTy may require
    [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
