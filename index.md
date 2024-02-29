@@ -37,11 +37,11 @@ which is available for Windows, MacOS, and Linux.
     ```
 
     If VSCode was running during the installation of git, you may need
-    to restart VSCode.
+    to restart VSCode first.
 
     ![QUTy platform installation](PlatformInstall.png)
 5. Create a PlatformIO project and configure the QUTy platform in the
-   `platformio.ini`` file:
+   `platformio.ini` file:
 
     ```ini
     [env:QUTy]
@@ -49,14 +49,17 @@ which is available for Windows, MacOS, and Linux.
     board = QUTy
     ```
 
-    or, open an existing project by opening a directory as a workspace
-    in VSCode.
+    or, open an existing project in a workspace in VSCode:
 
     ```txt
     File > Open Folder
     ```
 
-    Ensure that platformio.ini is present in the root of the workspace.
+    Ensure that `platformio.ini` is present in the root of the workspace
+    by checking the file tree in the Explorer tab.
+
+    The PlatformIO IDE extension will automatically configure a project
+    for the QUTy platform, when this file is present.
 6. Communicating with the QUTy may require
    [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
    to be installed on your system.
