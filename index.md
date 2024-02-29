@@ -30,7 +30,6 @@ which is available for Windows, MacOS, and Linux.
    For Windows users using an installer, the default options may be used.
 2. Install [Visual Studio Code](https://code.visualstudio.com/download)
 3. Install the [PlatformIO IDE extension](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) for VSCode.
-
 4. Install the QUTy platform via:
 
     ```txt
@@ -41,7 +40,6 @@ which is available for Windows, MacOS, and Linux.
     to restart VSCode.
 
     ![QUTy platform installation](PlatformInstall.png)
-
 5. Create a PlatformIO project and configure the QUTy platform in the
    `platformio.ini`` file:
 
@@ -59,7 +57,6 @@ which is available for Windows, MacOS, and Linux.
     ```
 
     Ensure that platformio.ini is present in the root of the workspace.
-
 6. Communicating with the QUTy may require
    [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
    to be installed on your system.
