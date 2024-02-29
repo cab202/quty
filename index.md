@@ -1,6 +1,8 @@
 ## QUTy Development Board
 
-QUTy is a development board based on the Microchip ATtiny1626 AVR microcontroller. It is designed specifically to teach microcontroller programming in the course _CAB202 Microprocessors and Digital Systems_.
+QUTy is a development board based on the Microchip ATtiny1626 AVR
+microcontroller. It is designed specifically to teach microcontroller
+programming in the course _CAB202 Microprocessors and Digital Systems_.
 
 ![QUTy development board](QUTy.png)
 
@@ -18,7 +20,9 @@ For further detail, please refer to the [QUTy-V01 schematic](QUTy-V01_Schematic.
 
 ### Development environment
 
-Development for the QUTy is supported via [PlatformIO](https://platformio.org/). We recommend using the [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode) which is available for Windows, MacOS, and Linux.
+Development for the QUTy is supported via [PlatformIO](https://platformio.org/).
+We recommend using the [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode)
+which is available for Windows, MacOS, and Linux.
 
 #### Installation
 
@@ -29,7 +33,7 @@ Development for the QUTy is supported via [PlatformIO](https://platformio.org/).
 
 4. Install the QUTy platform via:
 
-    ```ini
+    ```txt
     PlatformIO Home > Platforms > Advanced Installation > https://github.com/cab202/quty
     ```
 
@@ -43,11 +47,11 @@ Development for the QUTy is supported via [PlatformIO](https://platformio.org/).
     board = QUTy
     ```
 
-    OR, open an example project (see below).
+    Or, open an example project (see below).
 
-#### Drivers
-
-Depending on your system, you may need to download and install the [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) in order to be able to programme the QUTy, or use the serial monitor feature.
+6. Communicating with the QUTy may require
+   [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
+   to be installed on your system.
 
 #### Examples
 
@@ -68,6 +72,8 @@ PlatformIO Home > Platforms > QUTy > Examples
 
 ### Contact
 
-QUTy is designed and maintained by the Queensland University of Technology (QUT), based in Brisbane Australia. Please direct enquiries to [cab202.enquiries@qut.edu.au](mailto:cab202.enquiries@qut.edu.au?subject=QUTy development board).
+QUTy is designed and maintained by the Queensland University of
+Technology (QUT), based in Brisbane Australia. Please direct enquiries
+to [cab202.enquiries@qut.edu.au](mailto:cab202.enquiries@qut.edu.au?subject=QUTy development board).
 
-Copyright &copy; 2023 Queensland University of Technology (QUT). All rights reserved.
+Copyright &copy; 2024 Queensland University of Technology (QUT). All rights reserved.

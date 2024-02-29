@@ -2,7 +2,7 @@
 
 ### Installation
 
-If you do not want to install PIO globally, please see [Advanced Installation](#advanced-installation)
+If you do not wish to install PIO globally, please see [Advanced Installation](#advanced-installation)
 
 1. Install PlatformIO.
 
@@ -106,19 +106,19 @@ pio pkg list --global
 3. Build and upload your program to the QUTy microcontroller with the `run` command.
 
     ```bash
-    pio run --upload-port <port>
+    pio run -t upload
     ```
 
-    The port can be determined using
+    If PIO cannot determine the port automatically determined, use the `--upload-port` option to specify the port. The port can be found using the following command:
 
     ```bash
     pio device list
     ```
 
-    If no devices are listed, you may be missing some drivers. See [Drivers](index.md#drivers) for more information.
+    If no devices are listed, you may be missing some drivers. See [Installation](index.md#installation) for more information.
 
-4. Alternatively, omitting the `--upload-port` option will only build the program.
+4. Build your program with the `build` command.
 
     ```bash
-    pio run
+    pio run build
     ```
