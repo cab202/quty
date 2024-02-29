@@ -47,7 +47,7 @@ which is available for Windows, MacOS, and Linux.
     board = QUTy
     ```
 
-    Or, open an example project (see below).
+    or, open an existing project (see [Examples](#examples)).
 
 6. Communicating with the QUTy may require
    [Silicon Labs CP210x Virtual COM Port (VCP) drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
