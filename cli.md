@@ -103,7 +103,13 @@ pio pkg list --global
         -Wl,lib/<file name>
     ```
 
-3. Build and upload your program to the QUTy microcontroller with the `run` command.
+3. Build your program with the `run` command.
+
+    ```bash
+    pio run
+    ```
+
+4. Build and upload your program to the QUTy microcontroller with the `-t` flag.
 
     ```bash
     pio run -t upload
@@ -116,9 +122,3 @@ pio pkg list --global
     ```
 
     If no devices are listed, you may be missing some drivers. See [Installation](index.md#installation) for more information.
-
-4. Build your program with the `build` command.
-
-    ```bash
-    pio run build
-    ```
