@@ -41,8 +41,8 @@ which is available for Windows, MacOS, and Linux.
     to restart VSCode first.
 
     ![QUTy platform installation](PlatformInstall.png)
-5. Create a PlatformIO project and configure the QUTy platform in the
-   `platformio.ini` file:
+5. Create a PlatformIO project and configure the QUTy platform by
+   creating a `platformio.ini` file:
 
     ```ini
     [env:QUTy]
