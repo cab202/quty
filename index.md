@@ -31,7 +31,7 @@ which is available for Windows, MacOS, and Linux.
    options may be used.
 2. Install [Visual Studio Code](https://code.visualstudio.com/download).
 3. Install the [PlatformIO IDE extension](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) for VSCode.
-4. Install the QUTy platform via:
+4. Install the QUTy platform:
 
     ```txt
     PlatformIO Home > Platforms > Advanced Installation > https://github.com/cab202/quty
@@ -40,7 +40,8 @@ which is available for Windows, MacOS, and Linux.
     If VSCode was running during the installation of git, you may need
     to restart VSCode first.
 
-    ![QUTy platform installation](PlatformInstall.png)
+    ![QUTy platform installation navigation](PlatformInstallNavigation.png)
+    ![QUTy platform installation dialog box](PlatformInstallDialog.png)
 5. Create a PlatformIO project and configure the QUTy platform by
    creating a `platformio.ini` file:
 
