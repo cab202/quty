@@ -1,55 +1,62 @@
+#include "serial.h"
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
+
+#include <stdint.h>
 #include <stdio.h>
 
-//PB2 UART0 TXD
-//PB3 UART0 RXD
-
-//Function prototypes
+// Setup stdio stream
 static int uart_putchar(char c, FILE *stream);
 static int uart_getchar(FILE *stream);
-
-//Stream for stdio
 static FILE uart = FDEV_SETUP_STREAM(uart_putchar, uart_getchar, _FDEV_SETUP_RW);
 
-uint8_t rxbuf[256];             //Rx buffer
-volatile uint8_t pWrite = 0;    //Write index into Rx buffer
-uint8_t pRead = 0;     //Read index into Rx buffer
+// Rx buffer
+#define BUFFER_SIZE 256
+volatile char rx_buf[BUFFER_SIZE] = {0};
+volatile uint8_t rx_write = 0;
+uint8_t rx_read = 0;
 
-void serial_init(void) {
-    // Set Tx pin as output
+void serial_init(void)
+{
+    // Output enable UART_TX
     PORTB.DIRSET = PIN2_bm;
 
-    USART0.BAUD = 4167;  // 9600 baud @ 10 MHz
-    USART0.CTRLA = USART_RXCIE_bm;  // Enable recieve interrupt
+    USART0.BAUD = 4167;                           // 9600 baud @ 10 MHz
+    USART0.CTRLA = USART_RXCIE_bm;                // Enable recieve interrupt
     USART0.CTRLB = USART_RXEN_bm | USART_TXEN_bm; // Enable Tx/Rx
-    
-    //Assign stream to stdio
+
+    // Assign stream to stdio
     stdout = &uart;
     stdin = &uart;
 }
 
-uint8_t serial_bytesAvaialble(void) {
-    //Return number of bytes available in buffer
-    return (pWrite-pRead);
+uint8_t serial_bytes_available(void)
+{
+    // Return number of bytes available in buffer
+    return (rx_write - rx_read);
 }
 
-static int uart_putchar(char c, FILE *stream) {
-    //Wait while UART Tx busy
-    while (!(USART0.STATUS & USART_DREIF_bm));
-    //Write char to Tx buffer
+static int uart_putchar(char c, FILE *stream)
+{
+    while (!(USART0.STATUS & USART_DREIF_bm))
+        ; // Wait if UART Tx busy
+
+    // Write char to Tx buffer
     USART0.TXDATAL = c;
     return c;
 }
 
-static int uart_getchar(FILE *stream) {
-    //Wait while buffer is empty
-    while(!(pWrite-pRead));
-    //Return oldest character in buffer
-    return rxbuf[pRead++];
+static int uart_getchar(FILE *stream)
+{
+    while (!(rx_write - rx_read))
+        ; // Wait if buffer is empty
+
+    // Return oldest character in buffer
+    return rx_buf[rx_read++];
 }
 
-ISR(USART0_RXC_vect) {
-    //Add character to Rx buffer
-    rxbuf[pWrite++] = USART0.RXDATAL;
+ISR(USART0_RXC_vect)
+{
+    rx_buf[rx_write++] = USART0.RXDATAL;
 }
