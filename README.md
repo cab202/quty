@@ -1,5 +1,3 @@
-
-
 # QUTy Platform for PlatformIO
 
 ![examples](https://github.com/cab202/quty/actions/workflows/examples.yml/badge.svg)
